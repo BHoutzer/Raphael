@@ -1,0 +1,160 @@
+add_stroke():
+
+I need the places within the Drawing_Grid where an angle in a line is changed. I also need them to be placed proportionately to this drawing grid, and not the direct X and Y values.
+
+format_x_and_y_values(x, y, drawing_grid)
+
+The X and Y values must be represented as a percentage of the drawing grid.
+
+To figure this out, you must find the percentage of difference between window_x and grid_x and window_y and grid_y.
+
+Because of this, you should have Nodes that represent X, Y, and Angle. Would you then store the Strokes as Properties in a relationship? You could have a :User_ID Node that creates :Point relationships that have a 'stroke' property.
+
+(user:User {id: 0}) - [:Point {id: 0, index: 0, time: 0}] -> (x:X {value: 0})
+(user:User {id: 0}) - [:Point {id: 0, index: 0, time: 0}] -> (y:Y {value: 0})
+(user:User {id: 0}) - [:Point {id: 0, index: 0, time: 0}] -> (angle:Angle {value: 0})
+
+I don't think the Machine Learning will work if the values aren't consistent across screen sizes.
+
+Let's just try it and see what happens.
+- But see if you can get a consistent size across screens.
+
+
+Maybe, instead of needing consistent screen size to fix an error, you try to get people to improve by making some level of automatic improvement.
+If the error is about making an angle at an XY coordinate that's far away from a line, then you need to make a smaller angle at a closer XY coordinate.
+Ideally, they need to improve the earliest problems they made in an attempt. Whatever is consistently made is what they need to fix.
+
+You need to give people visual feedback for the error they're making. Whatever error is made the most, is what they need to fix the most often. Usage data is recorded to help figure out what recommendations need to be made so that they can move up the SOLO Taxonomy as quickly as possible. This includes how many times they need to practice a skill before they reach a particular accuracy. What accuracy they need to have before they should add new complexity to a skill. I need a way to structure lessons so that the user gets...
+
+Only collect data on user's strokes to be able to optimize the feedback that they can get without even needing a neural network. At best, the only reason that you'd want a Neural Network is to figure out the curriculum needed to maximize the user's Cognitive Load. This would use Reinforcement Learning. The RL algorithm would design their curriculum by Optimizing their Cognitive Load as high up on the Taxonomy as possible. The Curriculum would control the Sequencing and Combination of Exercises.
+
+Don't use Machine Learning for the Feedback. Use it for the Curriculum. The Lessons must be designed to measure the Cognitive Load of the User, and the Genetic Algorithms are used to 
+
+MATCH (user:User {id: row.id}
+CREATE 
+
+example_json = {
+	user_id
+	angle
+	length
+	device
+	stroke: {
+		0: {x, y}
+	}
+}
+
+What should the neo4j graph look like?
+I need State Nodes that determine how accurate a user's strokes is. It also needs to measure how consistent their accuracy is; meaning it gets measured over time to see how often they can maintain that accuracy.
+
+A stroke needs to be within some Competency range. 
+
+Instead of saving every X and Y value, you need to save where the line changes angles. Therefore, each node needs to be an Angle Node and have an Angle, X, Y, User_ID, and Stroke_ID.
+
+Stroke_ID is the count of Strokes for a specific User_ID and Line Type.
+
+Line Type: Straight, Ellipse, Bezier
+Line Properties: Angle, Major/Minor Axis, Point Placement
+
+Exercise: Trying to get a User to move from one State to another.
+
+States need to be measured as Probability Distributions. These Distributions are used to form a Difficulty Curve.
+
+I need a way to measure the consistency of the user's performance to get an idea of how the Probability that they can move to a better state. This includes a measurement of how long it will take them to improve.
+
+Users need to have a consistent sense of progression. The goals that they are given need to be focused on how well they can make progression on some set of challenges that move you up the SOLO Taxonomy. The Difficulty Curve would be a measurement of the probability that the user has to move back down the SOLO Taxonomy. The Challenge must also offer feedback to the user so that they can try to improve. The Challenge must also be designed so that the user can have their curriculum evolve based on their performance. If they can perform consistently at some metric, then they can get an exercises that requires them to perform at the level of that metric.
+
+The Reinforcement Learning is to give the Genetic Algorithms the greatest capacity to optimize the user's Cognitive Load.
+
+Part of Consistency is not needing to warm up on skills lower in the SOLO Taxonomy. Part of progression is allow the user to start higher up the Taxonomy. They need to have some way to level up such that if they can consistently do well enough at a skill in isolation and compounded with other skills, then it doesn't need to be practiced in isolation. Let the user know so that they can feel a sense of progression. There must be a sense of progression involved in the user's learning, or else they'll get demotivated.
+
+The goal of learning should be to start and end at higher areas of the taxonomy faster, more consistently, and with less of a warmup.
+
+Reinforcement Learning minimizes the Genetic Algorithm's Search Space. Genetic Algorithms are trying to create an Optimal Difficulty Curve on the SOLO Taxonomy.
+- You may need a different algorithm; perhaps an Evolutionary Algorithm.
+- Perhaps Ant Colony Optimization. It works on Graphs.
+
+How would Graphs be used to form a curriculum? I suppose they would be used on a model of how well people are doing at solving a specific task.
+
+Perhaps this is a Combinatorial Optimization problem, where a user who has a specific problem can search the Neo4j database and find similar usage data. It could then determine who has the best longterm results that has also had similar strengths and weaknesses.
+
+1. Find users with similar strengths and weaknesses.
+2. Find similar situations in their past.
+3. Find which path led to the best long-term results.
+4. Use that data to create a search space.
+
+So once you find users with a similar profile, see if you can find further commonalities in their past. If they are more and more common in their behavior, then you can start to look at their future. See what did and didn't work for them, and use that to help build a search space.
+- Use Ant Colony Optimization to ensure that this happens. This works by creating a search space from user behavior. If the users are similar to each other, then what worked for them will likely work for you. When there aren't a lot of similar users, the algorithm must focus on Exploration. However, when the users are similar, then you narrow the exploration mostly to what worked for them. The better they did, the more you should exploit this behavior, all the while still exploring.
+- You should also use Reinforcement Learning to create a general model that the user can depend on when they aren't connected to the internet. This should also help you to avoid having too many people query your database.
+
+---
+
+I want to use UNWIND to place all of the Stroke variables in place.
+
+Example:
+UNWIND []
+
+{
+  "events": [ {
+    "year": 2014,
+    "id": 1
+  }, {
+    "year": 2014,
+    "id": 2
+  } ]
+}
+
+
+{
+  "strokes": [ {
+    "x": ,
+    "y": ,
+    "angle": 
+  }, {
+    "x": ,
+    "y": ,
+    "angle": 
+  } ]
+}
+
+I need to create a function that checks for the angle between points and checks to see how large they are. Once I have this list, I should be able to compare each angle to its 
+
+I need to look for the distribution of angles alongside their X and Y value. In general, you need to have a minimum distance from the median that you can deviate from before it becomes the major issue that you need to fix.
+
+I need to measure the distance from the calculated line. For this, I need to know which points are 
+
+---
+
+Each user runs a Genetic Algorithm within a Tensorflow Model.
+This GA data is uploaded into a Graph Database.
+Reinforcement Learning algorithms are run on the Graph.
+The user gets an updated Tensorflow model of this Graph.
+
+Use Evolutionary Algorithms between Users with similar Drawing Patterns.
+
+I need a neural network that can classify what kind of category the student belongs in. This neural network can then recommend a Neo4j Index that the student can use to look up data from similar users. This must take the form of a Test, which allows a Neural Network to challenge a user and see if they fall into one category or another. This could, perhaps, be the point of orientation.
+
+
+Orientation would help the genetic algorithm make a guess about how well the user can perform if they give them specific challenge parameters.
+
+Reinforcement Learning and Genetic Algorithms must work together to figure out how to Optimize the user's Cognitive Load as high up on the SOLO taxonomy as they can.
+
+When you record a user's challenge data, you must use this within your Reinforcement Learning algorithm.
+
+You need to design exercises such that they rely on the user's Working Memory and Long-term Memory in particular stages. This way, you can measure their progress by how much they rely on their Working and Long-term Memory by how much they can achieve a particular goal without needing feedback and maintaining their ability to successfully accomplish the goal.
+
+The user should not only use Genetic Algorithms to figure out what they need to do next, but they should also query the server to find other users who have a similar profile and see what did and didn't work for them. This should then be used to reduce Exploration and move towards Exploitation.
+
+Every day, you should test the user's skill to see where they're at. You'll do this by climbing up the SOLO Taxonomy, and seeing what they struggle with. If they can't do something from memory, they can't move up the taxonomy.
+
+---
+
+How do I measure the Drawing User's State? Would it be the Accuracy that they achieved at a 
+
+I want there to be a Graph of the various States for each type of Practice. I want there to be a way to record a person's moves as being a move from one state to another. In fact, this must be how lessons are generated and their data stored. The whole Orientation, easy goal, hard goal, and stretch goal must be focused on trying to get the user to get to the next best state as fast as possible. This graded improvement must be focused on moving people up the SOLO Taxonomy by building the Smallest Achievable Perfection (Little Book of Talent).
+
+1. Save the amount of times that a user has practiced a particular skill.
+2. Save the date and time of when the user starts and ends a practice and when they make each stroke.
+3. An exercise_id must be saved, alongside a user_id, and their attempt_index.
+4. 
+
+By looking up the exercises overall, you can see what conditions lead to the most improved State in the shortest amount of Working Time. You can also find the ideal amount of time to practice. Measure their progress throughout the day so that you can recognize when they start to do worse, and then recommend that they stop for the day or take a break.

@@ -1,0 +1,3 @@
+1. Orientation - figure out what the user can consistently do at their best
+2. Generate Difficulty Curve - Figure out a criteria for the different stages of challenges that the user can perform. Needs an easy, hard, and stretch goal so that the user can see where they are wavering. The goal is to meet the hard goal. If the AI underestimated the user, then they can find that out by reaching the stretch goals. This will help the AI to understand how and when the user is improving, allowing it to improve even further.
+3. Status - What they excelled at and need to work on.

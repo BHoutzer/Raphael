@@ -1,0 +1,11 @@
+How do I make my MVP in one month? What would it actually need? Focus on shipping an MVP.
+
+Because of Scope Creep, I should cut down the number of features that I'll include in the MVP.
+
+Because of Analysis Paralysis, I should give myself a deadline so that I just have to take action.
+
+Make the MVP your singular focus.
+Factor in playtesting - at least 5 days of the month.
+You don't need loads of content - just see how it works as a complete whole. MVPs are for determining if an idea works and is worth developing.
+
+https://adapty.io/

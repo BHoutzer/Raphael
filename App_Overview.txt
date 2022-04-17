@@ -1,0 +1,253 @@
+Artist struggles:
+
+1. Too many choices/information - give them the information they need and use automation to improve their learning pace.
+2. Creating a style - people want the AI to figure out what they would like and then show it to them. (Perhaps you could use OCEAN testing)
+3. To have the AI correct them and provide a curriculum that pays attention to their weaknesses and assigns problems that will help them fix the problem. It would also give immediate & reliable feedback.
+
+Raphael: Learn Drawing Fundamentals
+
+- Bite-sized, interactive drawing instructions written in simple english. (It needs to be interactive enough that people who don't speak English know what's going on.)
+- Interactive Problems/Puzzles with Explicit Grading Rubric.
+  -- Emphasizes Muscle Memory as one of its Grading Criteria.
+- Curriculum using Bloom's Taxonomy.
+  -- Tells you when you should move onto another lesson. It should predict when someone will be skilled enough to make progress on the lesson.
+  -- Measures your progress.
+  -- Uses collected data to figure out how long people should stay on an exercise. It should predict when people are prepared to try another lesson. (Hidden Markov Models)
+- Has tests and exercises that measures how well you're performing.
+  -- Generates problems/puzzles for students based on their weaknesses.
+- Not a step-by-step cartoon drawing tutorial - these are the drawing fundamentals that allow you to draw anything, not instructions for copying and pasting lines to create a specific drawing.
+
+The AI must be designed so that it trains its users to understand the component skills required to make art; it cannot study a finished art piece. But it will train you to break down the art piece yourself and see where you need to improve. You would then take your trained eye and apply it towards your own artwork.
+
+Payment Tiers:
+
+1. Free: keep track of their strokes, give them limited problems/puzzles, show them ads after lessons,
+2. Basic (\$10): Shows them when they're ready to move onto a specific other lesson, gives them more detailed feedback, give them advanced/nuanced problems to focus on improving their weaknesses, ; they should also get Data Exploration tools that allow them to
+3. Pro (\$30): Maybe the Pro version could allow people to create tests for the entire community to try out. This is what users on the Free Version would receive, and the Pro would receive faster feedback about what does and doesn't work. Maybe they should have their own forum, where they can test ideas out and see what they can come up with. They should also have greater access to their data, as well as data found within the community. They should be able to create extensive exercises for themselves that can explicitly test particular features of their memory and skill. They should also get to time these exercises to put themselves under stress.
+
+I think exercises should be procedurally generated. There needs to be some metric that figures out what the student needs, and procedurally generates/evolves problems that it predicts will help the student learn the most.
+
+Critical Thinking Problems: Give the user a challenge that requires critical thinking. They may need to place one line on a drawing that prompts you to draw multiple - a multiple choice drawing challenge. The prompt needs users to draw the line based on a prompt that requires the user to select the line based on some selection criteria. How would you generate a Selection Criteria that is predicted to improve a student's weaknesses?
+
+Construction Lessons:
+
+1. Draw straight/bezier-curved lines.
+2. Draw primitive forms made up of straight/bezier-curved lines.
+3. Draw primitive forms that have other primitive forms added/subtracted from it, or are deformed.
+4. Draw primitive forms that make up a 3D object.
+
+Once you've gotten sufficiently advanced at a construction lesson, you can combine it with one or more extra challenges:
+
+1. Perspective: Create the illusion of 3D on a 2D surface.
+   -> Diminution: how things shrink as they move into the distance.
+   -> 1, 2, and 3-point perspective
+   -> Learn about right angles.
+   -> Learn about how blocks are made from right angles.
+   -> Learn to make cylinders from boxes.
+   -> Learn to make cross-contours, which will help you to predict how light will be reflected on an object.
+   -> Make things that are machine-like look organic.
+   --> I want to place a cube on the phone, and have it draw lines to the horizon to show where the Vanishing Points would have to be in order for that cube to be in perspective. Make people imagine that they carry their horizon lines. In fact, teach students that a painting with complex perspective will have multiple objects with their own perspectives, many of which won't be aligned with one another. Simple perspective has shared Vanishing Points that all objects are aligned with, and complex perspective has Vanishing Points unique to each object.
+2. Lighting
+3. Texture
+4. Materials
+
+Possible Features:
+
+1. Automatically look up art references for you.
+2. Scan photos for specific poses, angles, and objects.
+3. Expand the user's visual library (may primarily be used for Textures)
+4. Show students the possible style directions their drawing could go to based on the types of lines that they naturally make. That way they can purposefully use unusual marks to see what is possible in that direction. (use evolutionary algorithms)
+
+Any drawing exercise that's done with perspective, needs to 3D render the lines being drawn on a 2D Plane so that you can see what their lines would look like from a different angle. The artist would then try to see how that would be true from the 2D Plane they drew from. Figure out what feedback allows the artist learn as much as possible.
+
+Let people come up with their own 'exercise playlists', which are just a series of exercises that can help them to improve on some list of metrics.
+
+You need to create 'Summoning Salt'-type videos, where you tell a story of some kind that highlights a specific problem, challenge, or objective, and then show how the tools being used would allow the student to gradually get better at some task. Have highs and lows that allow people to get invested. Also, have a way to show how the AI evolved over time. Then discuss how the community analyzed these results and tried out new experiments.
+
+Create an Artist's Almanac that tells people how to speed up their art education. (iffy; this might make people skip out on paid tiers)
+
+You should eventually expand Dore so that Art Teachers can use it to teach people. They can rely on the data provided by the app to get an idea of how to teach their students. In addition, they can work with the data to predict how students will do within their respective course, and can adjust their curriculum to suit their student's needs. These Art Teachers can focus on giving those students a way to get into specific art sectors, which will allow them to get a career.
+
+You also need a way to create art styles.
+
+I want to use GANs to create photorealistic materials. They would react realistically under light. Maybe use PBRs for the Generator, and then use a Discriminator to make it more realistic.
+
+---
+
+GUI
+
+Panes:
+
+1. Canvas
+2. Menu
+   -> Perhaps I should have a button near the top, where if you click on it, then you change Panes.
+   -> Have the Pane disappear if the cursor is over the pane, but it wasn't clicked on.
+
+https://threejs.org/manual/#en/primitives
+
+I want to have a Dictionary that will show specific terms are defined, and have people practice creating those terms on the canvas. It should demonstrate what terms mean on the canvas.
+
+Dropdown Menus:
+
+1. Lesson - loads a practice.
+
+I think that each practice needs to allow you to add Perspective, Texture, and Lighting.
+
+Loading a Practice should take you to a page where you can see how much progress you've made at its tasks. This page should also give you some sign of how prepared a student is to accomplish some task, or how much they can improve if they put in the effort.
+
+You need a section where you introduce some idea, and have the student try it out. Then you need to combine these exercises.
+
+Draw a line from one point to another.
+
+Each exercise should have:
+
+1. Short tutorial
+2. Demonstration
+3. Exercise with explicit grading criteria
+
+---
+
+6 steps of drawing structure
+
+Structure:
+
+1. Structuralization: Learning to draw the simple shapes - cones, spheres, cylinders, boxes. Creating spatial awareness. Draw these shapes in 1, 2, or 3 point perspective. Draw these shapes intuitively. Draw multiple shapes together.
+2. Manipulation: Learning to manipulate shapes (commonly overlooked). Bend/twist, squish/stretch, manipulate the contours (helpful for organic shapes; it means to ), manipulate edges (beveling; the sort of processing you see in 3D modeling; check ThreeJS to see all options); (sidenote: draw things being affected by gravity). Teach people to manipulate simple shapes and make them interesting before they move on to more complex shapes.
+3. Observation: Breaking a complex shape into a composite of modified simple shapes. Identify the shapes, identify the manipulation.
+4. Education: Learning more about the things you want to know about.
+5. Imitation: Copy other artists to see how they use the ideas you're familiar. To cultivate your own style, you need an accumulation of ideas taken from people you look up to by imitating them. Take a little bit of every person's style; the end result will be yours.
+6. Imagination:
+
+It seems like 1 and 2 depend on knowing how Transform, Scale, and Rotate ThreeJS objects.
+
+Combine Iterative Drawing (Sycra) with Level Design ideas (GMTK).
+
+One way to challenge people would be to have them try to solve the same problem over and over again, but give them additional challenges based on the weaknesses that show up in their performance. To make them fix particular mistakes, you could make other things easier to allow them to focus on fixing just one problem, and then gradually turn up the difficulty until you're back to normal.
+
+---
+
+Artist struggles:
+
+1. Too many choices/information - give them the information they need and use automation to improve their learning pace.
+2. Creating a style - people want the AI to figure out what they would like and then show it to them. (Perhaps you could use OCEAN testing)
+3. To have the AI correct them and provide a curriculum that pays attention to their weaknesses and assigns problems that will help them fix the problem. It would also give immediate & reliable feedback.
+
+Raphael: Learn Drawing Fundamentals
+
+- Bite-sized, interactive drawing instructions written in simple english. (It needs to be interactive enough that people who don't speak English know what's going on.)
+- Interactive Problems/Puzzles with Explicit Grading Rubric.
+  -- Emphasizes Muscle Memory as one of its Grading Criteria.
+- Curriculum using Bloom's Taxonomy.
+  -- Tells you when you should move onto another lesson. It should predict when someone will be skilled enough to make progress on the lesson.
+  -- Measures your progress.
+  -- Uses collected data to figure out how long people should stay on an exercise. It should predict when people are prepared to try another lesson. (Hidden Markov Models)
+- Has tests and exercises that measures how well you're performing.
+  -- Generates problems/puzzles for students based on their weaknesses.
+- Not a step-by-step cartoon drawing tutorial - these are the drawing fundamentals that allow you to draw anything, not instructions for copying and pasting lines to create a specific drawing.
+
+The AI must be designed so that it trains its users to understand the component skills required to make art; it cannot study a finished art piece. But it will train you to break down the art piece yourself and see where you need to improve. You would then take your trained eye and apply it towards your own artwork.
+
+Payment Tiers:
+
+1. Free: keep track of their strokes, give them limited problems/puzzles, show them ads after lessons,
+2. Basic (\$10): Shows them when they're ready to move onto a specific other lesson, gives them more detailed feedback, give them advanced/nuanced problems to focus on improving their weaknesses, ; they should also get Data Exploration tools that allow them to
+3. Pro (\$30): Maybe the Pro version could allow people to create tests for the entire community to try out. This is what users on the Free Version would receive, and the Pro would receive faster feedback about what does and doesn't work. Maybe they should have their own forum, where they can test ideas out and see what they can come up with. They should also have greater access to their data, as well as data found within the community. They should be able to create extensive exercises for themselves that can explicitly test particular features of their memory and skill. They should also get to time these exercises to put themselves under stress.
+
+I think exercises should be procedurally generated. There needs to be some metric that figures out what the student needs, and procedurally generates/evolves problems that it predicts will help the student learn the most.
+
+Critical Thinking Problems: Give the user a challenge that requires critical thinking. They may need to place one line on a drawing that prompts you to draw multiple - a multiple choice drawing challenge. The prompt needs users to draw the line based on a prompt that requires the user to select the line based on some selection criteria. How would you generate a Selection Criteria that is predicted to improve a student's weaknesses?
+
+Construction Lessons:
+
+1. Draw straight/bezier-curved lines.
+2. Draw primitive forms made up of straight/bezier-curved lines.
+3. Draw primitive forms that have other primitive forms added/subtracted from it, or are deformed.
+4. Draw primitive forms that make up a 3D object.
+
+Once you've gotten sufficiently advanced at a construction lesson, you can combine it with one or more extra challenges:
+
+1. Perspective: Create the illusion of 3D on a 2D surface.
+   -> Diminution: how things shrink as they move into the distance.
+   -> 1, 2, and 3-point perspective
+   -> Learn about right angles.
+   -> Learn about how blocks are made from right angles.
+   -> Learn to make cylinders from boxes.
+   -> Learn to make cross-contours, which will help you to predict how light will be reflected on an object.
+   -> Make things that are machine-like look organic.
+   --> I want to place a cube on the phone, and have it draw lines to the horizon to show where the Vanishing Points would have to be in order for that cube to be in perspective. Make people imagine that they carry their horizon lines. In fact, teach students that a painting with complex perspective will have multiple objects with their own perspectives, many of which won't be aligned with one another. Simple perspective has shared Vanishing Points that all objects are aligned with, and complex perspective has Vanishing Points unique to each object.
+2. Lighting
+3. Texture
+4. Materials
+
+Possible Features:
+
+1. Automatically look up art references for you.
+2. Scan photos for specific poses, angles, and objects.
+3. Expand the user's visual library (may primarily be used for Textures)
+4. Show students the possible style directions their drawing could go to based on the types of lines that they naturally make. That way they can purposefully use unusual marks to see what is possible in that direction. (use evolutionary algorithms)
+
+Any drawing exercise that's done with perspective, needs to 3D render the lines being drawn on a 2D Plane so that you can see what their lines would look like from a different angle. The artist would then try to see how that would be true from the 2D Plane they drew from. Figure out what feedback allows the artist learn as much as possible.
+
+Let people come up with their own 'exercise playlists', which are just a series of exercises that can help them to improve on some list of metrics.
+
+You need to create 'Summoning Salt'-type videos, where you tell a story of some kind that highlights a specific problem, challenge, or objective, and then show how the tools being used would allow the student to gradually get better at some task. Have highs and lows that allow people to get invested. Also, have a way to show how the AI evolved over time. Then discuss how the community analyzed these results and tried out new experiments.
+
+Create an Artist's Almanac that tells people how to speed up their art education. (iffy; this might make people skip out on paid tiers)
+
+You should eventually expand Dore so that Art Teachers can use it to teach people. They can rely on the data provided by the app to get an idea of how to teach their students. In addition, they can work with the data to predict how students will do within their respective course, and can adjust their curriculum to suit their student's needs. These Art Teachers can focus on giving those students a way to get into specific art sectors, which will allow them to get a career.
+
+You also need a way to create art styles.
+
+I want to use GANs to create photorealistic materials. They would react realistically under light. Maybe use PBRs for the Generator, and then use a Discriminator to make it more realistic.
+
+---
+
+GUI
+
+Panes:
+
+1. Canvas
+2. Menu
+   -> Perhaps I should have a button near the top, where if you click on it, then you change Panes.
+   -> Have the Pane disappear if the cursor is over the pane, but it wasn't clicked on.
+
+https://threejs.org/manual/#en/primitives
+
+I want to have a Dictionary that will show specific terms are defined, and have people practice creating those terms on the canvas. It should demonstrate what terms mean on the canvas.
+
+Dropdown Menus:
+
+1. Lesson - loads a practice.
+
+I think that each practice needs to allow you to add Perspective, Texture, and Lighting.
+
+Loading a Practice should take you to a page where you can see how much progress you've made at its tasks. This page should also give you some sign of how prepared a student is to accomplish some task, or how much they can improve if they put in the effort.
+
+You need a section where you introduce some idea, and have the student try it out. Then you need to combine these exercises.
+
+Draw a line from one point to another.
+
+Each exercise should have:
+
+1. Short tutorial
+2. Demonstration
+3. Exercise with explicit grading criteria
+
+---
+
+6 steps of drawing structure
+
+Structure:
+
+1. Structuralization: Learning to draw the simple shapes - cones, spheres, cylinders, boxes. Creating spatial awareness. Draw these shapes in 1, 2, or 3 point perspective. Draw these shapes intuitively. Draw multiple shapes together.
+2. Manipulation: Learning to manipulate shapes (commonly overlooked). Bend/twist, squish/stretch, manipulate the contours (helpful for organic shapes; it means to ), manipulate edges (beveling; the sort of processing you see in 3D modeling; check ThreeJS to see all options); (sidenote: draw things being affected by gravity). Teach people to manipulate simple shapes and make them interesting before they move on to more complex shapes.
+3. Observation: Breaking a complex shape into a composite of modified simple shapes. Identify the shapes, identify the manipulation.
+4. Education: Learning more about the things you want to know about.
+5. Imitation: Copy other artists to see how they use the ideas you're familiar. To cultivate your own style, you need an accumulation of ideas taken from people you look up to by imitating them. Take a little bit of every person's style; the end result will be yours.
+6. Imagination:
+
+It seems like 1 and 2 depend on knowing how Transform, Scale, and Rotate ThreeJS objects.
+
+Combine Iterative Drawing (Sycra) with Level Design ideas (GMTK).
+
+One way to challenge people would be to have them try to solve the same problem over and over again, but give them additional challenges based on the weaknesses that show up in their performance. To make them fix particular mistakes, you could make other things easier to allow them to focus on fixing just one problem, and then gradually turn up the difficulty until you're back to normal.

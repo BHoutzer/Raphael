@@ -1,0 +1,42 @@
+# Backend
+
+1. Flask
+2. Neo4j:
+   - To send and get data from a server to the client.
+   - To record the important details from a lesson.
+   - To get a TensorFlow model that will adjust the lesson's properties to streamline the student's education.
+   - Data must be formatted so that data from one user can be applied to every other user.
+     - Maybe keep track of the device they're using, and only compare data from similar devices.
+     - Maybe look at their errors in terms of proportion.
+
+# Account Creation
+
+# Monetization
+
+- Ads
+- Subscription Models
+  1. Free: keep track of their strokes, give them limited problems/puzzles, show them ads after lessons,
+  2. Basic ($10): Shows them when they're ready to move onto a specific other lesson, gives them more detailed feedback, give them advanced/nuanced problems to focus on improving their weaknesses. They should also get to time these exercises to put themselves under stress.
+
+# Artist struggles
+
+1. Too many choices/information - give them the information they need and use automation to improve their learning pace.
+2. Creating a style - people want the AI to figure out what they would like and then show it to them. (Perhaps you could use OCEAN testing)
+3. To have the AI correct them and provide a curriculum that pays attention to their weaknesses and assigns problems that will help them fix the problem. It would also give immediate & reliable feedback.
+
+# Social Media
+
+- You need to create 'Summoning Salt'-type videos, where you tell a story of some kind that highlights a specific problem, challenge, or objective, and then show how the tools being used would allow the student to gradually get better at some task. Have highs and lows that allow people to get invested. Also, have a way to show how the AI evolved over time. Then discuss how the community analyzed these results and tried out new experiments.
+
+# Future Features
+
+1. Automatically look up art references for you.
+2. Scan photos for specific poses, angles, and objects.
+3. Expand the user's visual library (may primarily be used for Textures)
+4. Show students the possible style directions their drawing could go to based on the types of lines that they naturally make. That way they can purposefully use unusual marks to see what is possible in that direction. (use evolutionary algorithms)
+   - Create art styles
+5. Use GANs to create photorealistic materials. They would react realistically under light. Maybe use PBRs for the Generator, and then use a Discriminator to make it more realistic.
+
+---
+
+I want to create a Skill Tree made from SOLO's Taxonomy - SOLO Skill Tree. The Curriculum is how you explore this tree. In the beginning, you take a Linear path throught the tree, and gradually discover where the user has particular strengths and weaknesses.
